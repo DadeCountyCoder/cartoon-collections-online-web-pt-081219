@@ -1,17 +1,6 @@
-def roll_call_dwarves(dwarves)
-dwarves = %w[
-  Doc
-  Dopey
-  Bashful
-  Grumpy
-  Sneezy
-  Sleepy
-  Happy
-]
+planeteer_calls = %w[earth wind fire water heart]
 
-  dwarves.each_with_index do |dwarf, index|
-    puts "#{index + 1}. #{dwarf}"
-  end
+# Expected return value: ["Earth!", "Wind!", "Fire!", "Water!", "Heart!"]
+def summon_captain_planet(planeteer_calls)
+  planeteer_calls.map { |call| call.capitalize + '!' }
 end
-
-roll_call_dwarves(dwarves)
