@@ -38,12 +38,12 @@ describe 'Cartoon Collections' do
     end
   end
 
-  describe "#long_planeteer_calls" do
-    it "returns true if any calls are longer than 4 characters" do
-      calls_long = ["axe", "earth", "wind", "fire"]
-      expect(long_planeteer_calls(calls_long)).to eq(true)
-    end
+  planeteer_calls = %w[earth wind fire water heart]
 
+# Expected return value: ["Earth!", "Wind!", "Fire!", "Water!", "Heart!"]
+def summon_captain_planet(planeteer_calls)
+  planeteer_calls.map { |call| call.capitalize + '!' }
+end
     it "returns false if all calls are 4 characters or less" do
     calls_short = ["wind", "fire", "tree", "axe", "code"]
     expect(long_planeteer_calls(calls_short)).to eq(false)
